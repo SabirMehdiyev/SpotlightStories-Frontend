@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #aab6c3;
+}
+
+li {
+    list-style: none;
+}
+main{
+    background-color: #030d19;
+    padding: 50px 0;
+}
+.film-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.film-details img{
+    width: 30%;
+    height: 450px;
+}
+.details-image{
+    width: 15%;
+}
+.summary{
+    width: 64%;
+    font-size: 20px;
+}
+.summary-content{
+    box-shadow: -1px -1px 29px 0px rgb(238, 226, 4);
+    color:  red;
+    padding: 15px;
+    max-height: 330px;
+    overflow-y:auto;
+}
+.expand-details{
+    color: rgb(238, 226, 4);
+    margin-top: 20px;
+}
+h1{
+    color: yellow;
+    margin-bottom: 20px;
+}
