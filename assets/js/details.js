@@ -1,22 +1,23 @@
+let detailsContainer = document.querySelector('.movie-container');
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
 async function getMovieDetails(id) {
     const url = `https://api.tvmaze.com/shows/${id}`;
+    
     try {
         const response = await axios.get(url);
         const movieData = response.data;
         displayMovieDetails(movieData);
-    } catch (error) {
+    } 
+    catch (error) {
         window.location.href = "./error.html";
     }
 }
 
 function displayMovieDetails(movieData) {
-    const detailsContainer = document.querySelector('.movie-container');
-
     const detailsHTML = `
-        <h1>  </h1>
+        <h1>${movieData.name}</h1>
         <div class="film-details">
             <img class="details-img" src="${movieData.image.original}" alt="${movieData.name}">
             <div class="summary">
